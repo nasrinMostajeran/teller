@@ -1,0 +1,12 @@
+ATM Projecct Help:
+
+1)	If you are using Homestead and you have Ubuntu or OSX you need to add "atmapp.test" to your "/etc/hosts" file along and direct it to the ip address specified in your homestead.yml
+2)  Go into your homestead folder and run "vagrant provision". 
+3)  Log into your vagrant box using "vagrant ssh" command.
+4)  Navigate into the project directory in the virtual machine.
+5)  Install packages by using composer command "composer insatll"
+2)	rename “.env.example” to “.env” and make change based on your database config
+6)  Generate a encryption key for the project by running "artisan key:generate".
+3)	Run “php artisan migrate” command - it’ll make required tables
+4)	Run “php artisan db:seed” I’ve added some default queries for example user has accounts with cart and pin number. I assume my user swapped card with number: ”1034982”, pin number is : “12345”
+5)	User can login and deposit, withdraw and transfer between accounts. User also can see last 5 transactions in both checking and saving. + for me ;)
